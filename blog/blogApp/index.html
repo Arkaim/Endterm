@@ -1,0 +1,28 @@
+
+{% if posts %}
+	{% paginate posts %}
+
+	{% for post in posts %}
+			<header itemprop="post_name">
+				<a>
+          <h1>{{ post.post_name }}</h1>
+          <h2>{{ post.post_text }}</h2>
+				</a>
+			</header>
+
+			<p class="publish-data">
+				Posted on
+				<time itemprop="datePublished" datetime="{{ post.pub_date|date:'Y-m-d H:i:s' }}">
+					{{ post.pub_date }}
+				</time>				
+			</p>
+
+			<span itemprop="articleBody">{{ post.bodytext|markdown }}</span>
+
+	{% endfor %}
+
+	{% show_more "Load more blog posts" %}
+
+{% else %}
+    <p>There's no blog entries...</p>
+{% endif %}
