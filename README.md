@@ -1,1 +1,1 @@
-![alt text](https://github.com/adam-p/endterm/ScreenShot.png "Logo Title Text 1")
+![alt text](https://github.com/Arkaim/Endterm/blob/master/ScreenShot.png "Logo Title Text 1")
